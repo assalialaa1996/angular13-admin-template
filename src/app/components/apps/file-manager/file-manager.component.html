@@ -1,0 +1,269 @@
+<app-breadcrumb [title]="'File Manager'" [items]="['Apps']" [active_item]="'File Manager'"></app-breadcrumb>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-3 box-col-6 pr-0">
+      <div class="file-sidebar">
+        <div class="card">
+          <div class="card-body">
+            <ul>
+              <li>
+                <div class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-home">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>Home </div>
+              </li>
+              <li>
+                <div class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-folder">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  </svg>All </div>
+              </li>
+              <li>
+                <div class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-clock">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>Recent </div>
+              </li>
+              <li>
+                <div class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-star">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>Starred </div>
+              </li>
+              <li>
+                <div class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-alert-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12" y2="16"></line>
+                  </svg>Recovery </div>
+              </li>
+              <li>
+                <div class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-trash-2">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                  </svg>Deleted </div>
+              </li>
+            </ul>
+            <hr>
+            <ul>
+              <li>
+                <div class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-database">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>Storage </div>
+                <div class="m-t-15">
+                  <div class="progress sm-progress-bar mb-1">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p>25 GB of 100 GB used</p>
+                </div>
+              </li>
+            </ul>
+            <hr>
+            <ul>
+              <li>
+                <div class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-grid">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>Pricing plan</div>
+              </li>
+              <li>
+                <div class="pricing-plan">
+                  <h6>Trial Version </h6>
+                  <h5>FREE</h5>
+                  <p> 100 GB Space</p>
+                  <div class="btn btn-outline-primary btn-xs">Selected</div><img class="bg-img"
+                    src="assets/images/dashboard/folder.png" alt="" data-original-title="" title="">
+                </div>
+              </li>
+              <li>
+                <div class="pricing-plan">
+                  <h6>Premium</h6>
+                  <h5>$5/month</h5>
+                  <p> 200 GB Space</p>
+                  <div class="btn btn-outline-primary btn-xs">Contact Us</div><img class="bg-img"
+                    src="assets/images/dashboard/folder1.png" alt="" data-original-title="" title="">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-9 col-md-12 box-col-12">
+      <div class="file-content">
+        <div class="card">
+          <div class="card-header">
+            <div class="media">
+              <form class="form-inline" action="#" method="get">
+                <div class="form-group mb-0"> <i class="fa fa-search"></i>
+                  <input class="form-control-plaintext" type="text" placeholder="Search..." data-original-title=""
+                    title="">
+                </div>
+              </form>
+              <div class="media-body text-right">
+                <form class="d-inline-flex" action="#" method="POST" enctype="multipart/form-data" name="myForm">
+                  <div class="btn btn-primary mr-1" onclick="getFile()"> <svg xmlns="http://www.w3.org/2000/svg"
+                      width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="12" y1="8" x2="12" y2="16"></line>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>Add New</div>
+                  <div style="height: 0px;width: 0px; overflow:hidden;">
+                    <input id="upfile" type="file" value="upload" onchange="sub(this)" data-original-title="" title="">
+                  </div>
+                </form>
+                <div class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-upload">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>Upload </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body file-manager">
+            <h4 class="mb-3">All Files</h4>
+            <h6>Recently opened files</h6>
+            <ul class="files">
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-image-o txt-primary"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Logo.psd </h6>
+                  <p class="mb-1">2.0 MB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-archive-o txt-secondary"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Project.zip </h6>
+                  <p class="mb-1">1.90 GB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-excel-o txt-success"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Backend.xls</h6>
+                  <p class="mb-1">2.00 GB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-text-o txt-info"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>requirements.txt </h6>
+                  <p class="mb-1">0.90 KB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+            </ul>
+            <h6 class="mt-4">Folders</h6>
+            <ul class="folder">
+              <li class="folder-box">
+                <div class="media"><i class="fa fa-file-archive-o f-36 txt-warning"></i>
+                  <div class="media-body ml-3">
+                    <h6 class="mb-0">Endless admin</h6>
+                    <p>204 files, 50mb</p>
+                  </div>
+                </div>
+              </li>
+              <li class="folder-box">
+                <div class="media"><i class="fa fa-folder f-36 txt-warning"></i>
+                  <div class="media-body ml-3">
+                    <h6 class="mb-0">Endless admin</h6>
+                    <p>101 files, 10mb</p>
+                  </div>
+                </div>
+              </li>
+              <li class="folder-box">
+                <div class="media"><i class="fa fa-file-archive-o f-36 txt-warning"></i>
+                  <div class="media-body ml-3">
+                    <h6 class="mb-0">Endless admin</h6>
+                    <p>25 files, 2mb</p>
+                  </div>
+                </div>
+              </li>
+              <li class="folder-box">
+                <div class="media"><i class="fa fa-folder f-36 txt-warning"></i>
+                  <div class="media-body ml-3">
+                    <h6 class="mb-0">Endless admin</h6>
+                    <p>108 files, 5mb</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <h6 class="mt-4">Files</h6>
+            <ul class="files">
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-archive-o txt-secondary"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Project.zip </h6>
+                  <p class="mb-1">1.90 GB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-excel-o txt-success"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Backend.xls</h6>
+                  <p class="mb-1">2.00 GB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-text-o txt-info"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>requirements.txt </h6>
+                  <p class="mb-1">0.90 KB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+              <li class="file-box">
+                <div class="file-top"> <i class="fa fa-file-text-o txt-primary"></i><i
+                    class="fa fa-ellipsis-v f-14 ellips"></i></div>
+                <div class="file-bottom">
+                  <h6>Logo.psd </h6>
+                  <p class="mb-1">2.0 MB</p>
+                  <p> <b>last open : </b>1 hour ago</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
