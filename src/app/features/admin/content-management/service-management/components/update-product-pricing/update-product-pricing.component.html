@@ -1,0 +1,44 @@
+<div class="container-fluid">
+
+
+    <h2 class="text-center">
+        تحديث الأسعار
+    </h2>
+
+
+    <div class="card-body">
+        <form [formGroup]="updateProductPricingForm">
+
+
+            
+
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label>
+                    تسعيرة العموم
+                </mat-label>
+                <input formControlName="customPrice" type="number" matInput
+                    #input>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label>
+                    تسعيرة الفنادق
+                </mat-label>
+                <input formControlName="businessPrice" type="number" matInput
+                    #input>
+            </mat-form-field>
+
+
+
+
+            <div class="mt-3">
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="updateProduct()"
+                    type="button"><i class="fa fa-edit"></i> تحديث </button>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+
+    <h2 *ngIf="data == null" class="text-center">
+        إنشاء خدمة جديدة
+    </h2>
+    <h2 *ngIf="data.name" class="text-center">
+        تحديث خدمة {{data.name}}
+    </h2>
+
+    <div class="card-body">
+        <form [formGroup]="createServiceForm">
+
+
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>
+                    إختر الصنف من القائمة:
+                </mat-label>
+                <mat-select formControlName="category">
+
+                    <mat-option *ngFor="let category of categories"
+                        [value]="category.id">{{category?.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+
+            <div class="mt-3">
+                <button 
+                    mat-raised-button
+                    color="primary"
+                    (click)="attachCategoryToService()"
+                    type="button"><i class="fa fa-plus"></i> أضف </button>
+               
+            </div>
+        </form>
+    </div>
+
+</div>

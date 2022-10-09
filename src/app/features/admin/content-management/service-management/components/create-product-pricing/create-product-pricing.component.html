@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+
+    <h2 class="text-center">
+        إضافة تسعيرة جديدة
+    </h2>
+
+
+    <div class="card-body">
+        <form [formGroup]="createProductPricingForm">
+
+
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>
+                    إختر نوع اللباس من القائمة:
+                </mat-label>
+                <mat-select formControlName="type">
+
+                    <mat-option *ngFor="let type of types"
+                        [value]="type.id">{{type?.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label>
+                    تسعيرة العموم
+                </mat-label>
+                <input formControlName="customPrice" type="number" matInput
+                    #input>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label>
+                    تسعيرة الفنادق
+                </mat-label>
+                <input formControlName="businessPrice" type="number" matInput
+                    #input>
+            </mat-form-field>
+
+
+
+
+            <div class="mt-3">
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="createProduct()"
+                    type="button"><i class="fa fa-plus"></i> أضف </button>
+            </div>
+        </form>
+    </div>
+
+</div>

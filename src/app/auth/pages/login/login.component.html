@@ -1,0 +1,62 @@
+<div class="container-fluid p-0" dir="rtl">
+  <div class="row">
+    <div class="col-12">
+      <div class="login-card">
+        <div>
+          <div>
+            <a class="logo" routerLink='/'>
+
+            </a>
+          </div>
+          <div class="login-main">
+            <form class="theme-form" [formGroup]="loginForm">
+              <h4> بتسجيل الدخول كمسؤول</h4>
+              <p>أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول</p>
+              <div class="form-group">
+                <label class="col-form-label">
+                  عنوان البريد الالكترونى
+                </label>
+                <input class="form-control" type="email" required=""
+                  placeholder="app@yourmail.com" formControlName="email">
+                <div *ngIf="loginForm.controls.email.touched &&
+                  loginForm.controls.email.errors?.required"
+                  class="text text-danger mt-1">
+                  البريد الالكتروني مطلوب
+                </div>
+                <div *ngIf="loginForm.controls.email.touched &&
+                  loginForm.controls.email.errors?.email"
+                  class="text text-danger mt-1">
+                  بريد إلكتروني خاطئ
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label">كلمة المرور</label>
+                <input class="form-control" [type]="show ? 'text' : 'password'"
+                  formControlName="password" required=""
+                  placeholder="*********">
+                <div class="show-hide" (click)="showPassword()" *ngIf="!show"><span
+                    class="show"></span></div>
+                <div class="show-hide" (click)="showPassword()" *ngIf="show"><span
+                    class="Hide"></span></div>
+                <div *ngIf="loginForm.controls.password.touched &&
+                  loginForm.controls.password.errors?.required"
+                  class="text text-danger mt-1">
+                  كلمة المرور مطلوبة
+                </div>
+              </div>
+              <div class="form-group mb-0">
+
+                <button class="btn btn-primary btn-block"
+
+                  (click)="login()"
+                  type="button"><span>تسجيل الدخول</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

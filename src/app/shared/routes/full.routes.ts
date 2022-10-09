@@ -10,6 +10,10 @@ export const full: Routes = [
     loadChildren: () => import('../../pages/authentication/authentication.module').then(m => m.AuthenticationModule),
   },
   {
+    path: 'auth',
+    loadChildren: () => import('src/app/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: 'coming-soon',
     loadChildren: () => import('../../pages/coming-soon/coming-soon.module').then(m => m.ComingSoonModule),
   },

@@ -1,5 +1,7 @@
 export const environment = {
   production: true,
+  base_url: 'http://localhost:3000',
+  api_prefix:'api/v1',
   firebase: {
     apiKey: "AIzaSyCJi0cQ866lzPR8hYJUs77JUmD4DBpswl8",
     authDomain: "angular-deomo.firebaseapp.com",

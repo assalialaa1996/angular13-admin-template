@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './auth/pages/login/login.component';
 import { ContentComponent } from "./shared/components/layout/content/content.component";
 import { FullComponent } from "./shared/components/layout/full/full.component";
 import { full } from "./shared/routes/full.routes";
 import { content } from "./shared/routes/routes";
 
 import { AdminGuard } from './shared/guard/admin.guard';
+import { SecureInnerPagesGuard } from './shared/guard/SecureInnerPagesGuard.guard';
 
 const routes: Routes = [
   {
@@ -15,19 +16,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'auth/login',
-    component: LoginComponent
-  },
-  {
     path: '',
     component: ContentComponent,
-    //canActivate: [AdminGuard],
+    canActivate: [SecureInnerPagesGuard],
     children: content
   },
   {
     path: '',
     component: FullComponent,
-    //canActivate: [AdminGuard],
+    //canActivate: [SecureInnerPagesGuard],
     children: full
   },
   {

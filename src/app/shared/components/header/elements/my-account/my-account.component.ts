@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../../services/firebase/auth.service';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-my-account',
@@ -11,6 +11,10 @@ export class MyAccountComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.authService.SignOut();
   }
 
 }

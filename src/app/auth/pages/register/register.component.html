@@ -1,0 +1,141 @@
+<div class="container-fluid p-0" dir="rtl">
+    <div class="row ">
+
+        <div class="col-xl-12 p-0">
+            <div class="login-card">
+                <div>
+                    <div>
+                        <a class="logo" routerLink='/'>
+
+                        </a>
+                    </div>
+                    <div class="login-main">
+                        <form class="theme-form" [formGroup]="registerForm">
+                            <h4>أنشئ حسابك</h4>
+                            <p>أدخل بياناتك الشخصية والتجارية لإنشاء حسابك</p>
+                            <div class="form-group">
+                                <label class="col-form-label pt-0">الاسم الكامل</label>
+                                <div class="form-row">
+                                    <input class="form-control" type="text"
+                                        formControlName="fullName"
+                                        required="" placeholder="Full name">
+                                    <div
+                                        *ngIf="registerForm.controls.fullName.touched
+                                        &&
+                                        registerForm.controls.fullName.errors?.required"
+                                        class="text text-danger mt-1">
+                                        الإسم الكامل ضروري
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">
+                                    عنوان البريد الالكترونى
+                                </label>
+                                <input class="form-control" type="email"
+                                    formControlName="email"
+                                    required="" placeholder="app@maghassel.com">
+                                <div *ngIf="registerForm.controls.email.touched
+                                    &&
+                                    registerForm.controls.email.errors?.required"
+                                    class="text text-danger mt-1">
+                                    البريد الالكتروني مطلوب
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">
+                                    رقم الهاتف
+                                </label>
+                                <input class="form-control" type="tel"
+                                    formControlName="phone"
+                                    required="" placeholder="+966 XXXXXXXXX">
+                                <div *ngIf="registerForm.controls.phone.touched
+                                    &&
+                                    registerForm.controls.phone.errors?.required"
+                                    class="text text-danger mt-1">
+                                    الهاتف مطلوب
+                                </div>
+
+
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">
+                                    كلمة المرور
+                                </label>
+                                <input class="form-control" [type]="show ?
+                                    'text' : 'password'" name="login[password]"
+                                    required="" placeholder="*********"
+                                    formControlName="password">
+                                <div
+                                    *ngIf="registerForm.controls.password.touched
+                                    &&
+                                    registerForm.controls.password.errors?.required"
+                                    class="text text-danger mt-1">
+                                    كلمة المرور مطلوبة
+                                </div>
+                                <div class="show-hide" (click)="showPassword()"
+                                    *ngIf="!show"><span class="show"></span></div>
+                                <div class="show-hide" (click)="showPassword()"
+                                    *ngIf="show"><span class="Hide"></span></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">
+                                    موقع العمل
+                                </label>
+                                <input #search autocorrect="off"
+                                    autocapitalize="off" spellcheck="off"
+                                    type="text" class="form-control">
+
+
+                                <agm-map [latitude]="latitude" style="height:
+                                    300px;"
+                                    [longitude]="longitude"
+                                    [scrollwheel]="true" [zoom]="zoom">
+                                    <agm-marker [latitude]="latitude"
+                                        [longitude]="longitude"></agm-marker>
+                                </agm-map>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-form-label">الاسم التجاري</label>
+                                <input class="form-control" type="text"
+                                    formControlName="name"
+                                    required="">
+                                <div *ngIf="registerForm.controls.name.touched
+                                    &&
+                                    registerForm.controls.name.errors?.required"
+                                    class="text text-danger mt-1">
+                                    Name is required
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group mb-0">
+                                <div class="checkbox p-0">
+                                    <input formControlName="sterilization" id="checkbox1" type="checkbox">
+                                    <label class="text-muted" for="checkbox1">
+                                        تقديم خدمة التعقيم؟
+                                    </label>
+                                </div>
+
+
+
+                                <button (click)="register()"
+                                    class="btn
+                                    btn-primary btn-block"
+                                    type="button">إنشاء حساب</button>
+
+                            </div>
+
+                            <p class="mt-4 mb-0">هل لديك حساب؟<a
+                                    class="ml-2"
+                                    [routerLink]="'/auth/login-laundry'">
+                                    تسجيل الدخول</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

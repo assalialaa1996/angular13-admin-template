@@ -12,10 +12,10 @@ export class LanguagesComponent implements OnInit {
   public language: boolean = false;
 
   public languages: any[] = [{
-    language: 'English',
-    code: 'en',
+    language: 'اللغة العربية',
+    code: 'ar',
     type: 'US',
-    icon: 'us'
+    icon: 'sa'
   },
   {
     language: 'Español',
@@ -35,10 +35,10 @@ export class LanguagesComponent implements OnInit {
   }]
 
   public selectedLanguage: any = {
-    language: 'English',
-    code: 'en',
-    type: 'US',
-    icon: 'us'
+    language: 'اللغة العربية',
+    code: 'ar',
+    type: 'AR',
+    icon: 'sa'
   }
   
   constructor(private translate: TranslateService,

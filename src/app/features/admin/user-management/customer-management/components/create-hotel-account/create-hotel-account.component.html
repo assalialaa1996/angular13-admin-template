@@ -1,0 +1,59 @@
+<div class="container-fluid">
+
+
+    <h2 class="text-center">
+      إضافة فندق جديد
+    </h2>
+
+  
+  <div class="card-body">
+    <form class="theme-form" [formGroup]="createBusinessCustomerForm">
+      <div class="form-group row">
+
+
+
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>
+            البريد الإلكتروني
+          </mat-label>
+          <input matInput type="email" formControlName="email">
+
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-group row">
+     
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>
+            رقم الهاتف
+          </mat-label>
+          <input matInput type="tel" formControlName="phone">
+
+        </mat-form-field>
+      </div>
+      <div class="form-group row">
+     
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>
+            اسم الفندق
+          </mat-label>
+          <input matInput type="text" formControlName="fullName">
+
+        </mat-form-field>
+      </div>
+
+
+
+    </form>
+  </div>
+ 
+
+    <button mat-raised-button color="primary" (click)="createUser()">
+      أضف العميل
+    </button>
+
+
+
+
+</div>

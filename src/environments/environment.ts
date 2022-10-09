@@ -4,6 +4,9 @@
 
 export const environment = {
   production: true,
+  base_url: 'http://localhost:3002',
+  api_prefix:'api/v1',
+  MAPS_API_KEY:  'AIzaSyBIuIqhyn8SrXYJZIGWtjgaEXb-Vargfqo',
   firebase: {
     apiKey: "Your Api Key",
     authDomain: "Your Auth Domain",

@@ -35,11 +35,11 @@ export class AuthService implements OnInit {
       if (user) {
         this.userData = user;
         cookieService.set('user', JSON.stringify(this.userData));
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
+        //localStorage.setItem('user', JSON.stringify(this.userData));
+        //JSON.parse(localStorage.getItem('user'));
       } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
+        //localStorage.setItem('user', null);
+        //JSON.parse(localStorage.getItem('user'));
       }
     });
   }
